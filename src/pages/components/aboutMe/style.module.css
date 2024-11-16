@@ -43,8 +43,6 @@
 }
 
 
-
-
 .wordAnimation {
     transform: translateY(-72px);
     animation: wordUp 1s ease-in-out forwards;
