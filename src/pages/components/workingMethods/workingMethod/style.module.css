@@ -1,0 +1,129 @@
+.nameWorkingMethodWrapper {
+    border-bottom: 1px solid var(--color-font-gray-light);
+}
+
+.nameWorkingMethod {
+    overflow: hidden;
+    position: relative;
+    padding: 40px var(--page-margins-x);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    text-wrap: pretty;
+
+    @media (min-width: 1440px) {
+        padding: 52px var(--page-margins-x);
+    }
+}
+
+.nameWorkingMethod span {
+    text-transform: uppercase;
+    z-index: 1;
+    transition: color ease-in-out 240ms;
+
+    @media (min-width: 1200px) {
+        width: 480px;
+    }
+}
+
+.nameWorkingMethod img {
+    z-index: 1;
+    transform: rotateZ(180deg);
+    transition: transform ease-in-out 240ms;
+
+    @media (min-width: 1200px) {
+        height: 21px;
+    }
+}
+
+.nameWorkingMethod:hover img {
+    @media (min-width: 760px) {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.nameWorkingMethod img.open {
+    transform: rotateZ(0deg);
+}
+
+.hidingBlock {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--color-gray-milk-light);
+    width: 100%;
+    height: 100%;
+    transition: transform ease-in-out 240ms;
+    transform: translateY(102%);
+}
+
+.nameWorkingMethod:hover .hidingBlock {
+    @media (min-width: 760px) {
+        transform: translateY(0);
+    }
+}
+
+.blockHover {
+    pointer-events: none;
+    transition: opacity 240ms;
+}
+
+
+
+.nameWorkingMethod:hover span {
+    @media (min-width: 760px) {
+        color: var(--color-font-white);
+    }
+}
+
+.workingMethodDescription {
+    overflow: hidden;
+    transition: max-height ease-in-out 240ms;
+}
+
+/* calc-size(auto) */
+
+.workingMethodDescription div:first-of-type {
+    color: var(--color-gray-milk-light);
+    padding: 0 var(--page-margins-x) 32px;
+
+    @media (min-width: 1440px) {
+        padding: 0 var(--page-margins-x) 52px;
+    }
+}
+
+.workingMethodDescription div:last-of-type {
+    color: var(--color-gray-milk-light);
+    padding: 0 var(--page-margins-x) 40px;
+
+    @media (min-width: 1440px) {
+        padding: 0 var(--page-margins-x) 52px;
+    }
+}
+
+.hashtags {
+    color: var(--color-font-gray) !important;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    @media (min-width: 1440px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.supervision {
+    gap: 8px !important;
+
+    padding: 0 var(--page-margins-x) 32px !important;
+}
+
+.supervision div {
+    padding: 0 !important;
+}
+
+
+

@@ -1,0 +1,190 @@
+.containerAnimated {
+    width: 100%;
+    height: 10000px;
+    position: relative;
+    background-color: var(--color-gray-milk-light);
+}
+
+.container {
+    width: 100%;
+    background-color: var(--color-gray-light);
+    padding: var(--page-margins-y) 0 0;
+    position: sticky;
+
+    @media (min-width: 760px) {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "myName myName"
+            "leftArea rightArea";
+    }
+
+    @media (min-width: 1440px) {
+        padding-left: 56px;
+        width: calc(100% - 56px);
+
+    }
+}
+
+.myName {
+    padding: 0 16px;
+    margin-bottom: 36px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    text-transform: uppercase;
+
+    @media (min-width: 760px) {
+        grid-area: myName;
+        grid-template-columns: min-content auto;
+        grid-template-rows: auto;
+    }
+}
+
+
+
+
+.wordAnimation {
+    transform: translateY(-72px);
+    animation: wordUp 1s ease-in-out forwards;
+    animation-delay: 200ms;
+    margin-left: 12px;
+
+    @media (min-width: 760px) {
+        transform: translateY(-60px);
+        margin-left: 20px;
+    }
+
+    @media (min-width: 960px) {
+        margin-left: 56px;
+    }
+}
+
+@keyframes wordUp {
+    to {
+        transform: translateY(2px);
+    }
+}
+
+
+.description {
+    max-width: 523px;
+    margin-bottom: 12px;
+
+    @media (min-width: 1440px) {
+        margin-bottom: 16px;
+    }
+}
+
+
+
+
+
+.aboutMe {
+    color: var(--color-font-gray-light);
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+    @media (min-width: 760px) {
+        margin-bottom: 0;
+    }
+}
+
+.leftArea {
+    padding: 0 16px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (min-width: 1440px) {
+        gap: 80px;
+    }
+}
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @media (min-width: 760px) {
+        margin-top: 24px;
+    }
+
+    @media (min-width: 1440px) {
+        margin-top: 36px;
+    }
+}
+
+.educations {
+    background-color: var(--color-gray);
+    padding: 48px 0;
+    color: var(--color-font-white);
+
+    .training {
+        padding: 0 16px 30px;
+        text-align: right;
+        color: var(--color-font-white);
+    }
+
+    @media (min-width: 1440px) {
+        width: 640px;
+        justify-self: end;
+    }
+}
+
+.trainingItem {
+    padding: 42px 16px;
+    border-bottom: 1px solid var(--color-font-white-light);
+
+    @media (min-width: 760px) {
+        margin: 0 16px;
+    }
+
+    @media (min-width: 1440px) {
+        padding-right: 90px;
+    }
+}
+
+.trainingItem[class*='trainingItem']:first-of-type {
+    border-top: 1px solid var(--color-font-white-light);
+}
+
+
+
+.accordion {
+    margin-left: 56px;
+    max-height: 0px;
+    margin-top: 0px;
+    transition: max-height .6s ease-in-out, margin-top .6s ease-in-out 100ms;
+    overflow: hidden;
+    color: var(--color-font-white-light);
+}
+
+.accordionActive {
+    max-height: 140px;
+    margin-top: 30px;
+}
+
+
+.advantages {
+    position: relative;
+    left: 0px;
+    top: 20px;
+    opacity: 0;
+    transition: opacity .6s ease-in-out, top .6s ease-in-out;
+}
+
+.education {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    opacity: 0;
+    transition: opacity .6s ease-in-out, top .6s ease-in-out;
+}
+
+.show {
+    top: 0px;
+    opacity: 1;
+}

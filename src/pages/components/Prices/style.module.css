@@ -1,0 +1,161 @@
+.container {
+    background-color: var(--color-gray-milk-light);
+    padding: var(--page-margins-y) 0;
+}
+
+.heading {
+    padding: 0 var(--page-margins-x);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+
+    @media (min-width: 760px) {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "namePages slogan slogan"
+            "button button button";
+    }
+
+    @media (min-width: 960px) {
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto auto;
+    }
+}
+
+.namePages {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--color-font-white-light);
+}
+
+.slogan {
+    margin-bottom: 32px;
+    color: var(--color-font-white);
+
+    @media (min-width: 760px) {
+        margin-left: 20px;
+        grid-area: slogan;
+        justify-self: start;
+        width: 410px;
+    }
+
+    @media (min-width: 940px) {
+        width: 620px;
+    }
+
+    @media (min-width: 1440px) {
+        margin-left: 0px;
+        margin-bottom: 72px;
+        width: 1040px;
+    }
+}
+
+.slogan::first-letter {
+    margin-left: 22px;
+}
+
+@media (min-width: 940px) {
+    .slogan::first-letter {
+        margin-left: 36px;
+    }
+}
+
+.button {
+    margin-bottom: 24px;
+
+    @media (min-width: 760px) {
+        margin-bottom: 0px;
+        justify-self: end;
+        align-self: flex-end;
+        grid-area: button;
+    }
+}
+
+
+.prices {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 760px) {
+        margin-right: var(--page-margins-x);
+        margin-left: auto;
+        width: 640px;
+    }
+
+    @media (min-width: 1440px) {
+        margin-top: 20px;
+    }
+}
+
+.price {
+    padding: 40px var(--page-margins-x);
+    border-top: 1px solid var(--color-white-light);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto auto auto;
+    grid-template-areas:
+        "type type"
+        "name name"
+        "text text"
+        "duration price";
+
+
+    @media (min-width: 760px) {
+        padding: 42px 16px;
+        grid-template-areas:
+            "name type"
+            "text text"
+            "duration price";
+    }
+
+    @media (min-width: 1200px) {
+        padding: 42px var(--page-margins-x);
+    }
+}
+
+.type {
+    justify-self: end;
+    grid-area: type;
+    margin-bottom: 24px;
+    color: var(--color-font-white-light);
+}
+
+.namePrice {
+    grid-area: name;
+    margin-bottom: 20px;
+    color: var(--color-font-white);
+
+    @media (min-width: 1200px) {
+        margin-bottom: 24px;
+    }
+}
+
+.textPrice {
+    grid-area: text;
+    margin-bottom: 32px;
+    color: var(--color-font-white-light);
+
+    @media (min-width: 1200px) {
+        width: 366px;
+    }
+}
+
+.duration {
+    grid-area: duration;
+    display: flex;
+    justify-self: start;
+    padding: 9px 12px;
+    border-radius: 50px;
+    background-color: var(--color-white-light);
+    color: var(--color-font-white);
+}
+
+.countPrice {
+    color: var(--color-font-white);
+    grid-area: price;
+    text-transform: uppercase;
+    align-self: center;
+    justify-self: end;
+}

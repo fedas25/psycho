@@ -1,0 +1,75 @@
+.container {
+    background-color: var(--color-gray-milk-light);
+    padding: var(--page-margins-y) var(--page-margins-x);
+    display: grid;
+
+    @media (min-width: 760px) {
+        grid-template-columns: min-content auto;
+        grid-template-areas:
+            "name text"
+            "contacts contacts"
+            ". button";
+    }
+}
+
+.namePages {
+    text-transform: uppercase;
+    color: var(--color-font-white-light);
+    margin-bottom: 20px;
+
+    @media (min-width: 760px) {
+        grid-area: name;
+        text-wrap: nowrap;
+        margin-right: 20px;
+    }
+}
+
+.text {
+    color: var(--color-font-white);
+    text-indent: 20px;
+    margin-bottom: 34px;
+
+    @media (min-width: 760px) {
+        grid-area: text;
+        margin-bottom: 72px;
+    }
+}
+
+.contacts {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: 760px) {
+        grid-area: contacts;
+        flex-direction: row;
+    }
+}
+
+.contacts p {
+    color: var(--color-font-white) !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contacts img {
+    height: 14px;
+
+    @media (min-width: 760px) {
+        height: 20px;
+    }
+}
+
+.button {
+    @media (min-width: 760px) {
+        grid-area: button;
+        justify-self: end;
+        align-self: flex-end;
+    }
+
+    @media (min-width: 1200px) {
+        margin-left: auto;
+    }
+}

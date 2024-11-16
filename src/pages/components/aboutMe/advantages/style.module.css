@@ -1,0 +1,20 @@
+.container {
+    width: 100%;
+    background-color: var(--color-gray-light);
+    padding: var(--page-margins-y) 0 0;
+
+    @media (min-width: 760px) {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "myName myName"
+            "leftArea rightArea";
+    }
+
+    @media (min-width: 1440px) {
+        padding-left: 56px;
+        width: calc(100% - 56px);
+
+    }
+}
