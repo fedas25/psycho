@@ -33,11 +33,12 @@
 :root {
     --color-font-black: #2F2E2E;
     --color-font-gray: #5C4B42;
-    --color-font-gray-light: #806A5F66;
+    --color-font-gray-light: rgba(128, 106, 95, 0.6);
     --color-font-white: #FFFFFF;
     --color-font-white-light: #FFFFFF99;
 
     --color-gray-milk-light: #806A5F;
+    --color-gray-milk-light-btn: rgba(128, 106, 95, 0.1);
     --color-gray: #5C4B42;
     --color-gray-dark: #493B34;
     --color-gray-light: #F6F0E9;
@@ -56,13 +57,6 @@
         --page-margins-x: 56px;
         --page-margins-y: 96px;
     }
-}
-
-.container-block {
-    width: calc(100% - 32px);
-    margin: 48px auto;
-
-    @media screen and (min-width: 760px) {}
 }
 
 .h1-sm {
@@ -119,7 +113,7 @@
     line-height: 128%;
     color: var(--color-font-gray);
 
-    @media screen and (min-width: 960px) {
+    @media (min-width: 1140px) {
         font-size: 28px;
     }
 }

@@ -34,7 +34,7 @@ function WorkingMethod({ setIsOpen, isOpen, name, text, hashtags = [], type = ""
                         </div>
                         <div className={cn("h5-md", style.hashtags)}>
                             {hashtags.map((hashtag) => (
-                                <span key={hashtag}>// {hashtag}</span>
+                                <span style={{ textTransform: "uppercase" }} key={hashtag}>// {hashtag}</span>
                             ))}
                         </div>
                     </>
@@ -43,7 +43,7 @@ function WorkingMethod({ setIsOpen, isOpen, name, text, hashtags = [], type = ""
                     type === "supervision" &&
                     hashtags.map((title) => (
                         <div key={title.name} className={cn("h5-md", style.hashtags, style.supervision)}>
-                            <span>// {title.name}</span>
+                            <span style={{ textTransform: "uppercase" }}>// {title.name}</span>
                             <div className="text1">
                                 {title.textTitle}
                             </div>

@@ -1,8 +1,9 @@
 .nameWorkingMethodWrapper {
-    border-bottom: 1px solid var(--color-font-gray-light);
+    border-bottom: 1px solid var(--color-brown-light);
 }
 
 .nameWorkingMethod {
+    text-transform: uppercase;
     overflow: hidden;
     position: relative;
     padding: 40px var(--page-margins-x);

@@ -17,13 +17,14 @@
 }
 
 .toggleButton {
+    cursor: pointer;
     height: 100%;
     text-align: center;
     box-sizing: border-box;
     padding: 22px 8px;
     text-transform: uppercase;
-    border-top: 1px solid var(--color-font-gray-light);
-    border-bottom: 1px solid var(--color-font-gray-light);
+    border-top: 1px solid var(--color-brown-light);
+    border-bottom: 1px solid var(--color-brown-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,14 +63,16 @@
 }
 
 .toggleButton:hover span,
-.toggleButton:hover div {
-    @media (min-width: 1200px) {
+.toggleButton:hover div,
+.toggleButton:hover img {
+    @media (min-width: 760px) {
         opacity: 0.7;
     }
 }
 
 .toggleDefault {
     transition: opacity ease-in-out 240ms;
+    color: var(--color-gray-dark) !important;
 }
 
 .hiddenToggle {
@@ -86,7 +89,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid var(--color-font-gray-light);
+    border-bottom: 1px solid var(--color-brown-light);
 
     @media (min-width: 1440px) {
         padding: 52px var(--page-margins-x);

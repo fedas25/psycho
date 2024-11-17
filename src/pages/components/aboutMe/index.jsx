@@ -103,13 +103,13 @@ export default function AboutMe() {
                             </div>
                         </div>
                         <div>
-                            <h4 className="h4-md" style={{ textAlign: "end" }}>Интервью для канала Ольги Дьорди «Счастье это навык»</h4>
+                            <h4 className="h4-md" style={{ textAlign: "end", textTransform: "uppercase" }}>Интервью для канала Ольги Дьорди «Счастье это навык»</h4>
                             <div className={styles.links} style={{ justifyContent: "flex-end" }}>
                                 <Button>Яндекс музыка</Button>
                             </div>
                         </div>
                         <div>
-                            <h4 className="h4-md">Моя статья с техниками, как управлять стрессом</h4>
+                            <h4 className="h4-md" style={{textTransform: "uppercase"}}>Моя статья с техниками, как управлять стрессом</h4>
                             <div className={styles.links}>
                                 <Button>Яндекс музыка</Button>
                             </div>

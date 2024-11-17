@@ -149,7 +149,7 @@ const Index = () => {
                     }
                 </div>
 
-                <div style={{ width: "50%", borderLeft: "1px solid var(--color-font-gray-light)" }}>
+                <div style={{ width: "50%", borderLeft: "1px solid var(--color-brown-light)" }}>
                     <div
                         className={cn(style.toggleButton, "h4-md")}
                         onClick={() => setActiveGroupMethods(1)}

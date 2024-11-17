@@ -10,9 +10,8 @@ const Index = () => {
         <div className={style.container}>
             <div className={style.containerImg}>
                 <img className={style.img} src="/natalia.jpg" alt="Kuzina Natalia" />
-                {/* <div className={style.blockHide}></div> */}
             </div>
-            <div className={cn("container-block", style.containerBlock)}>
+            <div className={cn(style.secondContainerBlock)}>
                 <h1 className="h1-sm">
                     {/* TODO Вынести шрифт с логикой анимации в отдельный компонент */}
                     <div style={{ overflow: "hidden" }}>

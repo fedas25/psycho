@@ -7,7 +7,10 @@
     }
 }
 
-.containerBlock {
+.secondContainerBlock {
+    width: calc(100% - 32px);
+    margin: 48px auto;
+
     @media (min-width: 760px) {
         margin-top: 94px;
         padding: 0 16px;
@@ -19,14 +22,9 @@
     }
 
     @media (min-width: 1440px) {
-        padding: 0 56px;
         margin-top: 160px;
         margin-bottom: 160px;
-    }
-
-    @media (min-width: 1440px) {
         padding: 0 56px;
-        margin-top: 300px;
     }
 }
 

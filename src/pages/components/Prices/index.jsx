@@ -15,7 +15,7 @@ const Index = () => {
                     <div className={cn("text1", style.type)}>
                         онлайн-формат
                     </div>
-                    <div className={cn("h3-md", style.namePrice)}>
+                    <div className={cn("h3-md", style.namePrice)} style={{ textTransform: "uppercase" }}>
                         Первичная консультация
                     </div>
                     <div className={cn("text1", style.textPrice)}>
@@ -32,7 +32,7 @@ const Index = () => {
                     <div className={cn("text1", style.type)}>
                         онлайн-формат
                     </div>
-                    <div className={cn("h3-md", style.namePrice)}>
+                    <div className={cn("h3-md", style.namePrice)} style={{ textTransform: "uppercase" }} >
                         Первичная консультация
                     </div>
                     <div className={cn("text1", style.textPrice)}>

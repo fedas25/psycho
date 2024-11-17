@@ -25,6 +25,7 @@
 }
 
 .text {
+    max-width: 1800px;
     color: var(--color-font-white);
     text-indent: 20px;
     margin-bottom: 34px;
@@ -32,6 +33,10 @@
     @media (min-width: 760px) {
         grid-area: text;
         margin-bottom: 72px;
+    }
+
+    @media (min-width: 760px) {
+        margin-bottom: 136px;
     }
 }
 
@@ -42,6 +47,7 @@
     gap: 20px;
 
     @media (min-width: 760px) {
+        margin-bottom: 0px;
         grid-area: contacts;
         flex-direction: row;
     }
@@ -67,9 +73,11 @@
         grid-area: button;
         justify-self: end;
         align-self: flex-end;
+        margin-top: 32px;
     }
 
     @media (min-width: 1200px) {
+        margin-top: 0;
         margin-left: auto;
     }
 }

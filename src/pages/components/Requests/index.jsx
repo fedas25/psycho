@@ -44,7 +44,7 @@ const Index = () => {
             {data.map((data, index) => (
                 <div className={cn(style.case)} key={data.text} data-index={index} ref={(el) => elementsRefs.current[index] = el}>
                     <p className={cn(style.number, "h2-md")}>
-                        0{index}
+                        0{index + 1}
                     </p>
                     <div className={cn(style.text, "h2-md", { [style.active]: activeElements.has(index) })}>
                         {data.text}
