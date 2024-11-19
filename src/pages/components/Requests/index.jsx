@@ -2,7 +2,7 @@ import style from "./style.module.css"
 import useObserver from "@/hooks/useObserver";
 import cn from "classnames";
 import Button from "../ui/Button/Button";
-import { linkTest } from "@/constants";
+import { linkTest } from "@/pages/components/constants";
 
 const data = [
     {
