@@ -2,7 +2,7 @@ import cn from 'classnames';
 import styles from './style.module.css';
 import Button from '../ui/Button/Button';
 import { useEffect, useRef, useState } from 'react';
-import { linkYandexPodcast, linkVkPodcast, linkApplePodcast, linkInterview, linkArticle } from '@/pages/components/constants';
+import { linkYandexPodcast, linkVkPodcast, linkApplePodcast, linkInterview, linkArticle } from '@/pages/constants';
 
 // TODO Вынести анимацию появления текста в отдельный компонент или хук
 export default function AboutMe() {
