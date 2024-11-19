@@ -1,6 +1,7 @@
 import style from "./style.module.css"
 import cn from "classnames";
 import Button from "../ui/Button/Button";
+import { linkSession } from "@/constants";
 
 const Index = () => {
     return (
@@ -8,7 +9,7 @@ const Index = () => {
             <header className={style.heading}>
                 <p className={cn("h5-md", style.namePages)}>// стоимость консультации</p>
                 <p className={cn("h1-sm", style.slogan)}>Cделаем первый шаг к переменам вместе</p>
-                <Button classes={[style.button]}>Записаться на консультацию</Button>
+                <Button link={linkSession} classes={[style.button]}>Записаться на консультацию</Button>
             </header>
             <div className={style.prices}>
                 <div className={style.price}>

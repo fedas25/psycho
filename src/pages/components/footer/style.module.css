@@ -1,4 +1,7 @@
 .container {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
     background-color: var(--color-gray-milk-light);
     padding: var(--page-margins-y) var(--page-margins-x);
     display: grid;
@@ -43,8 +46,9 @@
 .contacts {
     margin-bottom: 40px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
+    row-gap: 10px;
 
     @media (min-width: 760px) {
         margin-bottom: 0px;

@@ -15,7 +15,7 @@ function WorkingMethod({ setIsOpen, isOpen, name, text, hashtags = [], type = ""
         <div onClick={setIsOpen} className={cn(style.nameWorkingMethodWrapper, "h4-md")}>
             <div style={paddingStyle} className={cn(style.nameWorkingMethod, { [style.blockHover]: isOpen }, "h4-md")}>
                 <span>{name}</span>
-                <img src="/arrowBrown.svg" className={cn([!isOpen && style.open])} />
+                <img src="/arrowMain.svg" className={cn([!isOpen && style.open])} />
                 <div className={style.hidingBlock}></div>
             </div>
 

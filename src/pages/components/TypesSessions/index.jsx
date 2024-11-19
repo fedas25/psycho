@@ -1,6 +1,7 @@
 import style from "./style.module.css"
 import cn from "classnames";
 import Button from "../ui/Button/Button";
+import { linkSession } from "@/constants";
 
 const data = [
     {
@@ -29,7 +30,7 @@ const Index = () => {
                 <p className={cn("text1", style.description)}>
                     Каждый новый шаг вперёд — это шаг к внутренней силе, осознанности и новым возможностям
                 </p>
-                <Button classes={[style.button]}>Записаться на консультацию</Button>
+                <Button link={linkSession} classes={[style.button]}>Записаться на консультацию</Button>
             </header>
             <div className={style.prices}>
                 {data.map(({ name, count, text }) => (

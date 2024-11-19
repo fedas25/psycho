@@ -2,6 +2,7 @@ import style from "./style.module.css"
 import cn from "classnames";
 import Button from "../ui/Button/Button";
 import useWindowWidth from "@/hooks/useWindowWidth";
+import { linkSession } from "@/constants";
 
 const Index = () => {
     const isMobile = useWindowWidth() <= 960;
@@ -37,7 +38,7 @@ const Index = () => {
                             Член Ассоциации специалистов в сфере контекстуально-поведенческой науки (АКПН)
                         </p>
                     </div>
-                    <Button fullWidth={isMobile} classes={[style.button]}>
+                    <Button link={linkSession} fullWidth={isMobile} classes={[style.button]}>
                         записаться на консультацию
                     </Button>
                 </div>

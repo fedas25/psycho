@@ -42,6 +42,10 @@
     }
 }
 
+.word::first-letter {
+    margin-left: 20px;
+}
+
 
 .wordAnimation {
     transform: translateY(-72px);
@@ -135,7 +139,7 @@
 .trainingItem {
     text-transform: uppercase;
     padding: 42px 16px;
-    border-bottom: 1px solid var(--color-font-white-light);
+    border-bottom: 1px solid var(--color-white-light);
 
     @media (min-width: 760px) {
         margin: 0 16px;
@@ -147,7 +151,7 @@
 }
 
 .trainingItem[class*='trainingItem']:first-of-type {
-    border-top: 1px solid var(--color-font-white-light);
+    border-top: 1px solid var(--color-white-light);
 }
 
 

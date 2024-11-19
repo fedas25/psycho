@@ -2,6 +2,7 @@ import style from "./style.module.css"
 import useObserver from "@/hooks/useObserver";
 import cn from "classnames";
 import Button from "../ui/Button/Button";
+import { linkTest } from "@/constants";
 
 const data = [
     {
@@ -38,7 +39,7 @@ const Index = () => {
             <header className={style.heading}>
                 <p className={cn("h5-md", style.namePages)}>// c чем работаю</p>
                 <p className={cn("h1-sm", style.slogan)}>Вместе мы сможем преодолеть трудности</p>
-                <Button classes={[style.button]}>ПРОЙТИ ТЕСТ НА УРОВЕНЬ ТРЕВОЖНОСТИ</Button>
+                <Button link={linkTest} classes={[style.button]}>ПРОЙТИ ТЕСТ НА УРОВЕНЬ ТРЕВОЖНОСТИ</Button>
             </header>
 
             {data.map((data, index) => (

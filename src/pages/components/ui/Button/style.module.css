@@ -1,4 +1,5 @@
 .container {
+    text-decoration: none;
     box-sizing: border-box;
     border-radius: 100px;
     padding: 6px 16px;
@@ -31,6 +32,10 @@
     overflow: hidden;
 }
 
+.text {
+    padding-top: 4px;
+}
+
 .arrow {
     width: 22px;
     height: 22px;
@@ -42,6 +47,11 @@
     display: flex;
     gap: 10px;
     transition: transform 320ms ease-in-out;
+}
+
+.arrows img {
+    transform: rotate(45deg);
+    filter: invert(1) brightness(2) contrast(2);
 }
 
 .container:hover .arrows {

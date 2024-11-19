@@ -6,10 +6,11 @@ const Button = ({
     onClick = () => { },
     fullWidth = false,
     classes = [],
+    classesArrow = [],
+    link = "",
 }) => {
-    
     return (
-        <button
+        <a
             className={cn(
                 "h5-md",
                 styles.container,
@@ -17,17 +18,22 @@ const Button = ({
                 ...classes
             )}
             onClick={onClick}
+            href={link}
+            target='blank'
         >
-            <span>
+            <span className={styles.text}>
                 {children}
             </span>
             <div className={cn(styles.containerArrow, { [styles.fullWidth]: fullWidth })} >
                 <div className={styles.arrows}>
-                    <img className={styles.arrow} src='/arrow.svg' />
-                    <img className={styles.arrow} src='/arrow.svg' />
+                    <img
+                        className={cn(...classesArrow, styles.arrow)}
+                        src='/arrowMain.svg'
+                    />
+                    <img className={cn(...classesArrow, styles.arrow)} src='/arrowMain.svg' />
                 </div>
             </div>
-        </button>
+        </a>
     );
 };
 
