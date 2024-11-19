@@ -2,7 +2,7 @@ import style from "./style.module.css"
 import cn from "classnames";
 import Button from "../ui/Button/Button";
 import useWindowWidth from "@/hooks/useWindowWidth";
-import { linkSession } from "@/pages/constants";
+import { linkSession } from "@/constants";
 
 const Index = () => {
     const isMobile = useWindowWidth() <= 960;

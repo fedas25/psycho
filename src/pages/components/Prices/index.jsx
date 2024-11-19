@@ -1,7 +1,7 @@
 import style from "./style.module.css"
 import cn from "classnames";
 import Button from "../ui/Button/Button";
-import { linkSession } from "../../constants";
+import { linkSession } from "../../../constants";
 
 const Index = () => {
     return (
