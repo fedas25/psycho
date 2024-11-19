@@ -1,6 +1,6 @@
 import useWindowWidth from "@/hooks/useWindowWidth";
 import Button from "../ui/Button/Button";
-import Link from "../ui/Link";
+import Link from "../ui/Link/Link";
 import style from "./style.module.css"
 import cn from "classnames";
 import { linkEmail, linkTg, linkWhatsapp, linkSession } from "@/pages/components/constants";
