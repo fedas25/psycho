@@ -3,7 +3,7 @@ import useObserver from "@/hooks/useObserver";
 import cn from "classnames";
 import Button from "../ui/Button/Button";
 import { linkTest } from "@/constants";
-import AnimatedWord from "../ui/AnimatedWord";
+import AnimatedWord from "../ui/AnimatedWord/AnimatedWord";
 
 const data = [
     {

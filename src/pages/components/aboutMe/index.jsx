@@ -3,7 +3,7 @@ import styles from './style.module.css';
 import Button from '../ui/Button/Button';
 import { useEffect, useRef, useState } from 'react';
 import { linkYandexPodcast, linkVkPodcast, linkApplePodcast, linkInterview, linkArticle } from '@/constants';
-import AnimatedWord from '../ui/AnimatedWord';
+import AnimatedWord from "../ui/AnimatedWord/AnimatedWord";
 
 // TODO Вынести анимацию появления текста в отдельный компонент или хук
 
