@@ -1,6 +1,6 @@
 .containerAnimated {
     width: 100%;
-    height: 10000px;
+    height: 6000px;
     position: relative;
     background-color: var(--color-gray-milk-light);
 }
@@ -47,14 +47,10 @@
 }
 
 
-.wordAnimation {
-    transform: translateY(-72px);
-    animation: wordUp 1s ease-in-out forwards;
-    animation-delay: 200ms;
+.wordSecond {
     margin-left: 12px;
 
     @media (min-width: 760px) {
-        transform: translateY(-60px);
         margin-left: 20px;
     }
 
@@ -62,13 +58,6 @@
         margin-left: 56px;
     }
 }
-
-@keyframes wordUp {
-    to {
-        transform: translateY(2px);
-    }
-}
-
 
 .description {
     max-width: 523px;
@@ -78,10 +67,6 @@
         margin-bottom: 16px;
     }
 }
-
-
-
-
 
 .aboutMe {
     color: var(--color-font-gray-light);
@@ -154,8 +139,6 @@
     border-top: 1px solid var(--color-white-light);
 }
 
-
-
 .accordion {
     margin-left: 56px;
     max-height: 0px;
@@ -166,7 +149,7 @@
 }
 
 .accordionActive {
-    max-height: 140px;
+    max-height: 220px;
     margin-top: 30px;
 }
 

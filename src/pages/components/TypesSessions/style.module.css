@@ -38,7 +38,7 @@
         margin-left: 20px;
         grid-area: slogan;
         justify-self: start;
-        width: 410px;
+         width: 410px;
     }
 
     @media (min-width: 940px) {

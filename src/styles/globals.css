@@ -136,7 +136,6 @@
     color: var(--color-font-gray);
 }
 
-
 /* CSS RESET */
 
 *,
@@ -158,6 +157,7 @@ html {
 body {
     line-height: 1;
     font-family: 'Geist';
+    background-color: var(--color-gray-milk-light);
 }
 
 ol,

@@ -2,6 +2,7 @@ import style from "./style.module.css"
 import cn from "classnames";
 import Button from "../ui/Button/Button";
 import { linkSession } from "@/constants";
+import AnimatedWord from "../ui/AnimatedWord";
 
 const data = [
     {
@@ -26,7 +27,11 @@ const Index = () => {
         <div className={style.container}>
             <header className={style.heading}>
                 <p className={cn("h5-md", style.namePages)}>// варианты терапевтической работы</p>
-                <p className={cn("h1-sm", style.slogan)}>ПОДДЕРДЖУ ВАС НА СЛОЖНОМ ЖИЗНЕННОМ ЭТАПЕ</p>
+                <div className={cn("h1-sm", style.slogan)}>
+                    <AnimatedWord>
+                        ПОДДЕРДЖУ ВАС НА СЛОЖНОМ ЖИЗНЕННОМ ЭТАПЕ
+                    </AnimatedWord>
+                </div>
                 <p className={cn("text1", style.description)}>
                     Каждый новый шаг вперёд — это шаг к внутренней силе, осознанности и новым возможностям
                 </p>

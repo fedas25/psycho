@@ -85,14 +85,17 @@
     grid-area: number;
     margin-bottom: 28px;
     color: var(--color-font-white-light) !important;
+    opacity: 0.2;
+    transition: opacity .6s ease-in-out;
 }
 
 .text {
     grid-area: text;
-    color: var(--color-font-white-light);
+    color: var(--color-font-white);
     margin-bottom: 32px;
     text-transform: uppercase;
-    transition: color .6s ease-in-out;
+    opacity: 0.2;
+    transition: opacity .6s ease-in-out;
 
     @media (min-width: 1440px) {
         margin-bottom: 42px;
@@ -106,9 +109,11 @@
     flex-wrap: wrap;
     column-gap: 12px;
     row-gap: 16px;
-    transition: color .6s ease-in-out;
+    color: var(--color-font-white);
+    opacity: 0.2;
+    transition: opacity .6s ease-in-out;
 }
 
 .active {
-    color: var(--color-font-white);
+    opacity: 1 !important;
 }

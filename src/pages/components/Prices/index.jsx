@@ -2,13 +2,16 @@ import style from "./style.module.css"
 import cn from "classnames";
 import Button from "../ui/Button/Button";
 import { linkSession } from "../../../constants";
+import AnimatedWord from "../ui/AnimatedWord";
 
 const Index = () => {
     return (
         <div className={style.container}>
             <header className={style.heading}>
                 <p className={cn("h5-md", style.namePages)}>// стоимость консультации</p>
-                <p className={cn("h1-sm", style.slogan)}>Cделаем первый шаг к переменам вместе</p>
+                <AnimatedWord>
+                    <p className={cn("h1-sm", style.slogan)}>Cделаем первый шаг к переменам вместе</p>
+                </AnimatedWord>
                 <Button link={linkSession} classes={[style.button]}>Записаться на консультацию</Button>
             </header>
             <div className={style.prices}>

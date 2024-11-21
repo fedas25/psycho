@@ -3,6 +3,7 @@ import useObserver from "@/hooks/useObserver";
 import cn from "classnames";
 import Button from "../ui/Button/Button";
 import { linkTest } from "@/constants";
+import AnimatedWord from "../ui/AnimatedWord";
 
 const data = [
     {
@@ -38,13 +39,15 @@ const Index = () => {
         <div className={style.container}>
             <header className={style.heading}>
                 <p className={cn("h5-md", style.namePages)}>// c чем работаю</p>
-                <p className={cn("h1-sm", style.slogan)}>Вместе мы сможем преодолеть трудности</p>
+                <AnimatedWord>
+                    <p className={cn("h1-sm", style.slogan)}>Вместе мы сможем преодолеть трудности</p>
+                </AnimatedWord>
                 <Button link={linkTest} classes={[style.button]}>ПРОЙТИ ТЕСТ НА УРОВЕНЬ ТРЕВОЖНОСТИ</Button>
             </header>
 
             {data.map((data, index) => (
                 <div className={cn(style.case)} key={data.text} data-index={index} ref={(el) => elementsRefs.current[index] = el}>
-                    <p className={cn(style.number, "h2-md")}>
+                    <p className={cn(style.number, "h2-md", { [style.active]: activeElements.has(index) })}>
                         0{index + 1}
                     </p>
                     <div className={cn(style.text, "h2-md", { [style.active]: activeElements.has(index) })}>

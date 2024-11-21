@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Zero from "./components/zero";
 import AboutMe from "./components/aboutMe";
@@ -6,17 +7,27 @@ import TypesSessions from "./components/TypesSessions";
 import Prices from "./components/Prices";
 import WorkingMethods from "./components/workingMethods";
 import Footer from "./components/footer";
-import { useEffect, useRef, useState } from "react";
 
 const CatchAllPage = () => {
     const footerRef = useRef(null);
     const [heightFooter, setHeightFooter] = useState(0);
 
     useEffect(() => {
-        if (typeof window !== 'undefined' && footerRef.current) {
-            const height = footerRef.current.clientHeight;
-            setHeightFooter(height);
+        const onLoad = () => {
+            if (footerRef.current) {
+                setHeightFooter(footerRef.current.clientHeight);
+            }
+        };
+
+        if (document.readyState === 'complete') {
+            onLoad();
+        } else {
+            window.addEventListener('load', onLoad);
         }
+
+        return () => {
+            window.removeEventListener('load', onLoad);
+        };
     }, []);
 
     return (
@@ -41,7 +52,6 @@ const CatchAllPage = () => {
 };
 
 export async function getStaticProps() {
-
     return {
         props: {},
     };
