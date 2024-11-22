@@ -13,34 +13,36 @@ const Index = () => {
                 <img className={style.img} src="/natalia.jpg" alt="Kuzina Natalia" />
             </div>
             <div className={cn(style.secondContainerBlock)}>
-                <h1 className="h1-sm">
-                    {/* TODO Вынести шрифт с логикой анимации в отдельный компонент */}
-                    <div style={{ overflow: "hidden" }}>
-                        <p className={style.wordAnimation}>
-                            Клинический
-                        </p>
-                    </div>
-                    <div style={{ overflow: "hidden" }}>
-                        <p className={style.wordAnimation} style={{ marginLeft: "14px" }}>
-                            психолог-супервизор
-                        </p>
-                    </div>
-                    <p className={cn(style.name, "h5-md")}>
+                <div>
+                    <h1 className="h1-sm">
+                        {/* TODO Вынести шрифт с логикой анимации в отдельный компонент */}
+                        <div style={{ overflow: "hidden" }}>
+                            <p className={style.wordAnimation}>
+                                Клинический
+                            </p>
+                        </div>
+                        <div style={{ overflow: "hidden" }}>
+                            <p className={style.wordAnimation} style={{ marginLeft: "14px" }}>
+                                психолог-супервизор
+                            </p>
+                        </div>
+                        <p className={cn(style.name, "h5-md")}>
                         // кузина Наталья
-                    </p>
-                </h1>
-                <div className={style.allContent}>
-                    <div className={style.descripton}>
-                        <p className="text1">
-                            В работе придерживаюсь Этического кодекса Коллегии по этике психологов и психотерапевтов (КЭПП)
                         </p>
-                        <p className="text1">
-                            Член Ассоциации специалистов в сфере контекстуально-поведенческой науки (АКПН)
-                        </p>
+                    </h1>
+                    <div className={style.allContent}>
+                        <div className={style.descripton}>
+                            <p className="text1">
+                                В работе придерживаюсь Этического кодекса Коллегии по этике психологов и психотерапевтов (КЭПП)
+                            </p>
+                            <p className="text1">
+                                Член Ассоциации специалистов в сфере контекстуально-поведенческой науки (АКПН)
+                            </p>
+                        </div>
+                        <Button link={linkSession} fullWidth={isMobile} classes={[style.button]}>
+                            записаться на консультацию
+                        </Button>
                     </div>
-                    <Button link={linkSession} fullWidth={isMobile} classes={[style.button]}>
-                        записаться на консультацию
-                    </Button>
                 </div>
             </div>
         </div>
