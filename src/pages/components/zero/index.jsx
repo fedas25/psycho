@@ -15,7 +15,6 @@ const Index = () => {
             <div className={cn(style.secondContainerBlock)}>
                 <div>
                     <h1 className="h1-sm">
-                        {/* TODO Вынести шрифт с логикой анимации в отдельный компонент */}
                         <div style={{ overflow: "hidden" }}>
                             <p className={style.wordAnimation}>
                                 Клинический
