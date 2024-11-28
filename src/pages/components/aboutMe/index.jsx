@@ -18,7 +18,7 @@ export default function AboutMe() {
                 const rect = elementRef.current.getBoundingClientRect();
 
                 if (rect.top < 248) {
-                    const numberAcardion = Math.floor((window.scrollY - rect.top) / 1000);
+                    const numberAcardion = Math.floor((window.scrollY - rect.top) / 500);
                     setNumberAcardionActive(numberAcardion);
                 }
             }
