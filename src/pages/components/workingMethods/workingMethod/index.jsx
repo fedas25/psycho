@@ -3,20 +3,11 @@ import style from "./style.module.css"
 import cn from "classnames";
 
 function WorkingMethod({ setIsOpen, isOpen, name, text, hashtags = [], type = "" }) {
-    const [paddingStyle, setPaddingStyle] = useState(null);
-
-    useEffect(() => {
-        if (type === "supervision") {
-            setPaddingStyle({ padding: "40px var(--page-margins-x)" });
-        }
-    }, [type]);
-
     return (
-        <div onClick={setIsOpen} className={cn(style.nameWorkingMethodWrapper, "h4-md")}>
-            <div style={paddingStyle} className={cn(style.nameWorkingMethod, { [style.blockHover]: isOpen }, "h4-md")}>
+        <div className={cn(style.nameWorkingMethodWrapper, "h4-md")}>
+            <div onClick={setIsOpen} className={cn(style.nameWorkingMethod, { [style.blockHover]: isOpen }, "h4-md")}>
                 <span>{name}</span>
                 <img src="/arrowMain.svg" className={cn([!isOpen && style.open])} />
-                <div className={style.hidingBlock}></div>
             </div>
 
             <div
@@ -52,6 +43,10 @@ function WorkingMethod({ setIsOpen, isOpen, name, text, hashtags = [], type = ""
 
                 }
             </div>
+
+            <div
+                className={cn(style.hidingBlock, [isOpen && style.hidingBlockNone])}
+            ></div>
         </div>
     )
 }
