@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
 import style from "./style.module.css"
 import cn from "classnames";
 
-function WorkingMethod({ setIsOpen, isOpen, name, text, hashtags = [], type = "" }) {
+function WorkingMethod({ setIsOpen, isOpen = false, name, text, hashtags = [], type = "" }) {
     return (
         <div className={cn(style.nameWorkingMethodWrapper, "h4-md")}>
-            <div onClick={setIsOpen} className={cn(style.nameWorkingMethod, { [style.blockHover]: isOpen }, "h4-md")}>
+            <div onClick={setIsOpen} className={cn(style.nameWorkingMethod, { [style.titleDefault]: !isOpen }, "h4-md")}>
                 <span>{name}</span>
                 <img src="/arrowMain.svg" className={cn([!isOpen && style.open])} />
             </div>
@@ -44,9 +43,7 @@ function WorkingMethod({ setIsOpen, isOpen, name, text, hashtags = [], type = ""
                 }
             </div>
 
-            <div
-                className={cn(style.hidingBlock, [isOpen && style.hidingBlockNone])}
-            ></div>
+            <div className={cn(style.hidingBlock, [isOpen && style.hidingBlockNone])}></div>
         </div>
     )
 }

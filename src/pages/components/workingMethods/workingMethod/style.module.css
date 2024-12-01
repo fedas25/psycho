@@ -35,23 +35,11 @@
 .nameWorkingMethod img {
     transform: rotate(45deg);
     transform: rotateZ(180deg);
-    transition: transform ease-in-out 240ms;
+    transition: transform ease-in-out 240ms, filter ease-in-out 240ms;
     height: 22px;
 
     @media (min-width: 1200px) {
         height: 28px;
-    }
-}
-
-.nameWorkingMethodWrapper:hover .nameWorkingMethod img {
-    @media (min-width: 760px) {
-        filter: invert(1) brightness(2) contrast(2);
-    }
-}
-
-.nameWorkingMethodWrapper:hover .nameWorkingMethod.blockHover img {
-    @media (min-width: 760px) {
-        filter: none;
     }
 }
 
@@ -86,16 +74,16 @@
     transition: opacity 240ms;
 }
 
-.nameWorkingMethodWrapper:hover .nameWorkingMethod span {
+.titleDefault:hover>span {
+    transition: color ease-in-out 240ms;
     @media (min-width: 760px) {
         color: var(--color-font-white);
     }
 }
 
-.nameWorkingMethodWrapper:hover .nameWorkingMethod.blockHover span {
+.titleDefault:hover>img {
     @media (min-width: 760px) {
-        color: var(--color-font-gray);
-        ;
+        filter: invert(1) brightness(2) contrast(2);
     }
 }
 
