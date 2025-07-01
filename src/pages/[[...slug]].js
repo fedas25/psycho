@@ -7,6 +7,9 @@ import TypesSessions from "./components/TypesSessions";
 import Prices from "./components/Prices";
 import WorkingMethods from "./components/workingMethods";
 import Footer from "./components/footer";
+import Menu from "./components/menu";
+
+// TODO сделать файл index в компонентах, что бы из него тянулись все компоненты без этих сосисок в импортах
 
 const CatchAllPage = () => {
     const footerRef = useRef(null);
@@ -39,6 +42,7 @@ const CatchAllPage = () => {
             <div>
                 <div style={{ position: "sticky", zIndex: 2, marginBottom: heightFooter }}>
                     <Zero />
+                    <Menu />
                     <AboutMe />
                     <Requests />
                     <TypesSessions />
