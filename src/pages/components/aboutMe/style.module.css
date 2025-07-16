@@ -7,8 +7,9 @@
 
 .container {
     width: 100%;
+    top: 0px;
     background-color: var(--color-gray-light);
-    padding: var(--page-margins-y) 0 0;
+    padding: var(--page-margins-y) 0 0px;
     position: sticky;
 
     @media (min-width: 760px) {
@@ -126,6 +127,11 @@
     padding: 32px 16px;
     border-bottom: 1px solid var(--color-white-light);
 
+    display: grid;
+    grid-template-rows: auto 0fr;
+    transition: grid-template-rows .6s ease-in-out, gap .6s ease-in-out;
+    gap: 0px;
+
     @media (min-width: 760px) {
         margin: 0 16px;
     }
@@ -135,24 +141,20 @@
     }
 }
 
-.trainingItem[class*='trainingItem']:first-of-type {
-    border-top: 1px solid var(--color-white-light);
+.trainingItemActive {
+    grid-template-rows: auto 1fr; /* Строка расширяется до высоты содержимого */
+    gap: 30px; /* Анимируем появление отступа вместо margin-top */
 }
 
 .accordion {
     margin-left: 56px;
-    max-height: 0px;
-    margin-top: 0px;
-    transition: max-height .6s ease-in-out, margin-top .6s ease-in-out 100ms;
     overflow: hidden;
     color: var(--color-font-white-light);
 }
 
-.accordionActive {
-    max-height: 220px;
-    margin-top: 30px;
+.trainingItem[class*='trainingItem']:first-of-type {
+    border-top: 1px solid var(--color-white-light);
 }
-
 
 .advantages {
     position: relative;

@@ -26,10 +26,10 @@ const Index = () => {
                         Мы познакомимся и сможем понять, подходим ли друг другу.
                     </div>
                     <div className={cn("text2", style.duration)}>
-                        10 минут
+                        30 минут
                     </div>
                     <div className={cn("h2-md", style.countPrice)}>
-                        6 000 ₽
+                        2 600 ₽
                     </div>
                 </div>
                 <div style={{ borderBottom: "1px solid var(--color-white-light)" }} className={style.price}>
@@ -37,13 +37,13 @@ const Index = () => {
                         онлайн-формат
                     </div>
                     <div className={cn("h3-md", style.namePrice)} style={{ textTransform: "uppercase" }} >
-                        Первичная консультация
+                        Терапевтическая сессия
                     </div>
                     <div className={cn("text1", style.textPrice)}>
-                        Мы познакомимся и сможем понять, подходим ли друг другу.
+                        Встреча направленная на доверие и проффесиональную поддержку. 
                     </div>
                     <div className={cn("text2", style.duration)}>
-                        10 минут
+                        50-55 минут
                     </div>
                     <div className={cn("h2-md", style.countPrice)}>
                         6 000 ₽
